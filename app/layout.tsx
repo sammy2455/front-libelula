@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className="min-h-screen bg-background text-primary-foreground bg-[url('/img/wp10615910.jpg')]!">
+      <body className="min-h-screen bg-background text-primary-foreground">
         {children}
       </body>
     </html>
