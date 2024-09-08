@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Libelula Movies",
@@ -8,10 +7,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
-      <body className="min-h-screen bg-background text-primary-foreground">
+      <div className="relative bg-[url('../img/wp10615910.jpg')] bg-cover">
         {children}
-      </body>
-    </html>
+      </div>
   );
 }
