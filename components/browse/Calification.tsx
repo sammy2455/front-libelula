@@ -1,6 +1,6 @@
 import { UserAvatar } from "./UserAvatar";
 
-const Calification = (props) => {
+const Calification = (props: { movieName: any; }) => {
     return (
         <div className="my-4">
             <div className="flex space-x-4">

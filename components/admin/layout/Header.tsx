@@ -6,14 +6,14 @@ import { Home, User } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
-    const [scrollY, setScrollY] = useState(0); //Get scroll position
+    const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
 
-        handleScroll(); //Set the initial scroll value
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);

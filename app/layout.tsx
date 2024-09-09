@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "Libelula Movies",
@@ -10,7 +11,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es">
       <body className="min-h-screen bg-background text-primary-foreground">
-        {children}
+        <Providers>
+            {children}
+        </Providers>
       </body>
     </html>
   );

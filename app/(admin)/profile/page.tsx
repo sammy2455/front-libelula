@@ -1,4 +1,3 @@
-import Califications from "@/components/browse/Califications";
 import MyCalifications from "@/components/profile/MyCalifications";
 import { Button } from "@/components/ui/button";
 import { UserIcon } from "lucide-react";
@@ -16,8 +15,8 @@ const ProfilePage = () => {
             </div>
             <div className="col-span-full md:col-span-4 flex flex-col justify-center space-y-4">
                 <ul>
-                    <li><span>Nombre: </span><span className="text-primary">Sammy Camatón</span></li>
-                    <li><span>Correo: </span><span className="text-primary">sammy2455@hotmail.com</span></li>
+                    <li><span>Nombre: </span><span className="text-primary">Jhonny Camatón</span></li>
+                    <li><span>Correo: </span><span className="text-primary">jhonnyalbert245@gmail.com</span></li>
                 </ul>
                 <div>
                     <Button>Cerrar Sesión</Button>
