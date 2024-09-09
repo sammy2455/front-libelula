@@ -4,10 +4,11 @@ import MovieCard from "@/components/browse/MovieCard";
 import {useEffect} from "react";
 import useMovie from "@/modules/movies/hooks/useMovie";
 import {Movie} from "@/interfaces/Movies";
+import {MovieContextType} from "@/modules/movies/context/MovieProvider";
 
 const BrowsePage = () => {
 
-    const {movies, fetchMovies} = useMovie();
+    const {movies, fetchMovies} = useMovie() as MovieContextType;
 
     useEffect(() => {
         fetchMovies();

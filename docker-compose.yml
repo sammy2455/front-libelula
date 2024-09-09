@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  node:
+    build:
+      dockerfile: ./dockerfiles/node.dockerfile
+    container_name: node-libelula
+    restart: unless-stopped
+    ports:
+      - "4400:3000"
+    networks:
+      - sammy
+
+networks:
+  sammy:
+    name: libelula-web-net
+    driver: bridge

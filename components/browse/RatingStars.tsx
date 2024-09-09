@@ -2,7 +2,7 @@ import React from 'react';
 import { Star } from 'lucide-react';
 
 interface RatingStarsProps {
-    rating: number | string;
+    rating: number | string | undefined;
 }
 
 const RatingStars: React.FC<RatingStarsProps> = ({ rating }) => {

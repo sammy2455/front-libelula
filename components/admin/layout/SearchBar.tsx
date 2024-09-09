@@ -2,10 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react"
 import useMovie from "@/modules/movies/hooks/useMovie";
+import {MovieContextType} from "@/modules/movies/context/MovieProvider";
  
 export function SearchBar() {
 
-    const {searchQuery, setSearchQuery, handleSearch} = useMovie();
+    const {searchQuery, setSearchQuery, handleSearch} = useMovie() as MovieContextType;
 
     return (
         <div className="flex w-full max-w-md items-center space-x-2">

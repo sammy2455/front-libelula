@@ -2,7 +2,7 @@ import React, { createContext, useState, ReactNode } from "react";
 import axios from "axios";
 import {Movie} from "@/interfaces/Movies";
 
-interface MovieContextType {
+export interface MovieContextType {
     movies: Movie[];
     setMovies: React.Dispatch<React.SetStateAction<Movie[]>>;
     movie: Partial<Movie>;
@@ -13,7 +13,7 @@ interface MovieContextType {
     setLoading: React.Dispatch<React.SetStateAction<boolean>>;
     fetchMovies: (search?: string) => Promise<void>;
     fetchOneMovie: (imdbID: string) => Promise<void>;
-    handleSearch: (event: React.FormEvent<HTMLFormElement>) => void;
+    handleSearch: (event: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const MovieContext = createContext<MovieContextType | undefined>(undefined);
@@ -54,7 +54,7 @@ const MovieProvider: React.FC<MovieProviderProps> = ({ children }) => {
         }
     };
 
-    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSearch = (event: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
         fetchMovies(searchQuery);
     };

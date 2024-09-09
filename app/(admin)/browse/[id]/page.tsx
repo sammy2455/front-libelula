@@ -6,12 +6,13 @@ import useMovie from "@/modules/movies/hooks/useMovie";
 import {useEffect} from "react";
 import {useParams} from "next/navigation";
 import RatingStars from "@/components/browse/RatingStars";
+import {MovieContextType} from "@/modules/movies/context/MovieProvider";
 
 const MovieDetail = () => {
 
     const params = useParams<{ id: string; }>()
 
-    const {movie, fetchOneMovie} = useMovie();
+    const { movie, fetchOneMovie } = useMovie() as MovieContextType;
 
     useEffect(() => {
         fetchOneMovie(params.id);
