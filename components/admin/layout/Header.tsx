@@ -23,10 +23,10 @@ const Header = () => {
 
     return (
         <div className="fixed top-0 left-0 md:m-4 lg:mt-4 lg:mx-0 z-30 right-0 flex justify-center">
-            <div className={`w-full max-w-384 grid-layout ${scrollY > 30 ? '!px-0' : '!px-0'}`}>
+            <div className={`w-full max-w-384 grid-layout !px-0 lg:!px-5`}>
                 <nav 
                     className={`border-b md:border border-b-white/15 md:border-white/15 md:shadow-sm ${scrollY > 30 ? 'shadow-sm' : ''}
-                     px-5 lg:px-4 relative py-2 bg-white/5 backdrop-blur-lg rounded-b-lg md:rounded-lg col-span-full lg:col-start-2 lg:col-end-12
+                     px-5 lg:px-4 relative py-2 bg-white/5 backdrop-blur-lg rounded-b-lg md:rounded-lg col-span-full
                     `}
                 >
                     <div className="flex justify-between items-center">

@@ -4,7 +4,7 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
   	return (
 		<div className={`min-h-screen flex flex-col`}>
 			<Header/>
-			<main className="grow mt-16">
+			<main className="grow mt-20 md:mt-24">
 				{children}
 			</main>
 		</div>
