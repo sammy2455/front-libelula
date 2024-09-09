@@ -32,7 +32,7 @@ const MovieProvider: React.FC<MovieProviderProps> = ({ children }) => {
         setLoading(true);
         setMovies([]);
         try {
-            const response = await axios.get<{ Search: Movie[] }>(`http://www.omdbapi.com/?apikey=6344c1aa&page=1&type=movie&s=${search}`);
+            const response = await axios.get<{ Search: Movie[] }>(`https://www.omdbapi.com/?apikey=6344c1aa&page=1&type=movie&s=${search}`);
             setMovies(response.data.Search);
             setLoading(false);
         } catch (e) {
@@ -45,7 +45,7 @@ const MovieProvider: React.FC<MovieProviderProps> = ({ children }) => {
         setLoading(true);
         setMovie({});
         try {
-            const response = await axios.get<Movie>(`http://www.omdbapi.com/?apikey=6344c1aa&i=${imdbID}`);
+            const response = await axios.get<Movie>(`https://www.omdbapi.com/?apikey=6344c1aa&i=${imdbID}`);
             setMovie(response.data);
             setLoading(false);
         } catch (e) {
